@@ -1,0 +1,383 @@
+body {
+  margin: 0;
+  font-family: "HelveticaNeue", "sans-serif";
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.header {
+  background-image: url(./image/zebraBanner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 653px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.header__describes {
+  color: white;
+  margin: 200px auto;
+}
+
+.nav {
+  width: 100%;
+  background-color: #ffffffe0;
+}
+
+.nav__container {
+  display: flex;
+  margin: auto;
+  padding: 0 20px;
+  max-width: 1023px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "HelveticaNeueMedium", "sans-serif";
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.logo__text-link {
+  color: #06b5a9;
+  text-decoration: none;
+}
+
+.logo__text {
+  margin: 0;
+  line-height: 60px;
+}
+
+.logo__text_grey {
+  color: #626262;
+}
+
+.list__items {
+  font-family: "HelveticaNeueLight", "sans-serif";
+  list-style: none;
+  display: flex;
+  margin: 0;
+  line-height: 40px;
+  padding: 0;
+}
+
+.list__items_item {
+  cursor: pointer;
+}
+
+.item-link {
+  color: #626262;
+  line-height: 60px;
+  padding: 22px 20px;
+}
+
+.item-link:hover {
+  color: white;
+  background: #cf1a2b;
+}
+
+.nav__basket {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 31px;
+}
+
+.additition__menu {
+  position: absolute;
+  width: max-content;
+  display: none;
+  background: #cf1a2b;
+  cursor: auto;
+}
+
+.show {
+  display: flex;
+}
+
+.basket_image {
+  height: 17px;
+}
+
+.nav__basket_price {
+  color: #8c8f8c;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.list__items_item {
+  position: relative;
+}
+
+.logo__link {
+  padding: 0px 20px;
+  font-size: 26px;
+  color: #fec8cd;
+  font-weight: bold;
+}
+
+.tie__box_logo {
+  font-family: "HelveticaNeueMedium", "sans-serif";
+  text-align: center;
+}
+
+.logo__text-white {
+  color: white;
+}
+
+.tie__box_logo {
+  border-top: 1px solid #d94855;
+  border-bottom: 1px solid #d94855;
+}
+
+.menu__list_items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu__list {
+  border-left: 1px solid #d94855;
+}
+
+.items-link {
+  font-family: "HelveticaNeueLt", "sans-serif";
+  color: #ebb6b9;
+  display: block;
+  padding: 0 20px;
+}
+
+.items-link:hover {
+  background-color: white;
+  color: #cf1a2b;
+}
+
+.header__describes_small {
+  font-family: "HelveticaNeueMed", "sans-serif";
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 36px;
+  margin: 0;
+}
+
+.header__describes_title {
+  font-family: "HelveticaNeueMed", "sans-serif";
+  font-size: 95px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.promo__container {
+  width: 100%;
+  background: white;
+}
+
+.promo__products {
+  list-style: none;
+  padding: 0;
+  max-width: 1023px;
+  display: flex;
+  margin: 15px auto;
+  justify-content: space-around;
+}
+
+.categories {
+  background-image: url(./image/zebraBunnerCategorias.png);
+  background-size: cover;
+  margin: auto;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.categories__title {
+  font-size: 100px;
+  color: white;
+  padding-top: 30px;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+}
+
+.categories__items {
+  overflow: hidden;
+  margin: auto;
+  max-width: 1224px;
+  height: 270px;
+  position: relative;
+}
+
+[class|="categories__items_item"]:hover {
+  background: #4bcfc6ef;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.categories__items_item-empty,
+.categories__items_item-shoes,
+.categories__items_item-tshort,
+.categories__items_item-pans,
+.categories__items_item-capy {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: #58dbd2a4;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first_ellips {
+  left: 1%;
+  top: 50px;
+}
+
+.second_ellips {
+  top: 0px;
+  left: 11%;
+}
+
+.third_ellips {
+  top: 50px;
+  left: 22%;
+}
+
+.fourth_ellips {
+  left: 33%;
+}
+
+.fifth_ellips {
+  top: 50px;
+  left: 44%;
+}
+
+.sixth_ellips {
+  left: 55%;
+  top: 11px;
+}
+
+.seventh_ellips {
+  top: 60px;
+  left: 66%;
+}
+
+.eighth_ellips {
+  left: 77%;
+}
+
+.levis__container {
+  background-color: white;
+  max-width: 1023px;
+  margin: auto;
+}
+
+.levis__container_product {
+  max-width: 1024px;
+  display: flex;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.product__title {
+  font-family: "HelveticaNeueMedium", "sans-serif";
+  font-size: 50px;
+  margin: 0;
+}
+
+.product__descriptions {
+  font-family: "HelveticaNeueLight", "sans-serif";
+  font-size: 17px;
+  width: 80%;
+  color: #1d1d1d;
+}
+
+.product__rate {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.main_levis_brand {
+  position: relative;
+  top: -16px;
+}
+
+.rate {
+  font-size: 30px;
+  font-family: "HelveticaNeueLight", "sans-serif";
+}
+
+.levis__gallery {
+  margin: 25px 0;
+}
+
+.gallery__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.gallary__list_product {
+  border: 1px solid #cacaca;
+  cursor: pointer;
+}
+
+.gallary__list_product:hover {
+  border: 1px solid red;
+}
+
+.add_to_cart {
+  font-size: 30px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: #d62132;
+  padding: 5px 10px;
+}
+
+.footer {
+  background-color: #1b2330;
+  width: 100%;
+  padding: 0 20px 10px;
+}
+
+.footer_conatainer {
+  max-width: 1023px;
+  margin: auto;
+}
+
+.footer__sociale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sociale__link {
+  margin: 0 10px;
+}
+
+.copryright_text {
+  font-family: "HelveticaNeueLight", "sans-serif";
+  margin: 0;
+  color: #50545b;
+}
