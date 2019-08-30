@@ -11,6 +11,7 @@
   </head>
   <body>
     <header class="header">
+      <h1 class="main__text">ZebraShop</h1>
       <nav class="nav">
         <div class="nav__container">
           <div class="logo">
@@ -20,7 +21,7 @@
               </a>
             </p>
           </div>
-          <div class="nav__list">
+          <div class="nav__list showNavElement">
             <ul class="list__items">
               <li class="list__items_item" data-element="home">
                 <a href="#" class="item-link">Home</a>
@@ -36,7 +37,7 @@
               </li>
             </ul>
           </div>
-          <div class="nav__basket">
+          <div class="nav__basket showNavElement">
             <img
               src="./image/basket-icon.png"
               alt="basket-icon"
@@ -47,14 +48,17 @@
               <img src="./image/triangle-icon.png" alt="triangle-icon" />
             </a>
           </div>
+          <div class="nav__icon" id="navIcon">	
+              &#119064;
+          </div>
         </div>
       </nav>
-      <div class="header__describes">
-          <img src="./image/left-arrow.png" class="left-arrow" alt="left-arrow-icon">
-          <img src="./image/right-arrow.png" class="right-arrow" alt="right-arrow-icon">
+      <section class="header__describes">
+          <button class="left-arrow" alt="left arrow icon"></button>
+          <button class="right-arrow" alt="right arrow icon"></button>
         <p class="header__describes_small">introducing</p>
-        <h1 class="header__describes_title">wild eyse</h1>
-      </div>
+        <h2 class="header__describes_title">wild eyse</h2>
+      </section>
       <div class="promo__container">
         <ul class="promo__products">
           <li class="promo__products-product">
@@ -81,8 +85,8 @@
       </div>
     </header>
     <main class="main">
-      <div class="categories">
-        <h1 class="categories__title">categories</h1>
+      <section class="categories">
+        <h2 class="categories__title">categories</h2>
         <div class="categories__items">
           <div class="categories__items_item-empty first_ellips"></div>
           <div class="categories__items_item-shoes second_ellips">
@@ -117,8 +121,8 @@
           </div>
           <div class="categories__items_item-empty eighth_ellips"></div>
         </div>
-      </div>
-      <div class="levis__container">
+      </section>
+      <section class="levis__container">
         <div class="levis__container_product">
           <div class="product__describes">
             <img
@@ -126,9 +130,9 @@
               class="main_levis_brand"
               alt="levis_brand"
             />
-            <h1 class="product__title">
+            <h2 class="product__title">
               Mens Levis Jeans-071
-            </h1>
+            </h2>
             <p class="product__descriptions">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -179,7 +183,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer_conatainer">
@@ -192,15 +196,15 @@
             </p>
           </div>
           <div class="sociale__links">
-            <a href="#" class="sociale__link"
-              ><img src="./image/facebook-icon.png" alt="facebook-icon"
-            /></a>
-            <a href="#" class="sociale__link"
-              ><img src="./image/twitter-icon.png" alt="twitter-icon"
-            /></a>
-            <a href="#" class="sociale__link"
-              ><img src="./image/rss-icon.png" alt="rss-icon"
-            /></a>
+            <a href="#" class="sociale__link-facebook">
+              <img src="./image/facebook-icon.png" alt="facebook-icon"/>
+            </a>
+            <a href="#" class="sociale__link">
+              <img src="./image/twitter-icon.png" alt="twitter-icon"/>
+            </a>
+            <a href="#" class="sociale__link">
+              <img src="./image/rss-icon.png" alt="rss-icon"/>
+            </a>
           </div>
         </div>
         <div class="Copyright">

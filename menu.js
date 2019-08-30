@@ -56,14 +56,25 @@ menuItems.forEach(item => {
 });
 
 const menuProductItem = document.querySelector('[data-element="products"]');
-const additionProductMenu = document.querySelector('.additition__menu');
+const additionProductMenu = document.querySelector(".additition__menu");
 
-  menuProductItem.addEventListener('mouseover', () => {
-    additionProductMenu.classList.add('show');
-  })
+menuProductItem.addEventListener("mouseover", () => {
+  additionProductMenu.classList.add("show");
+});
 
-  document.addEventListener('mousemove',(event) => {
-    if(!event.target.closest('[data-element="products"]')) {
-      additionProductMenu.classList.remove('show');
-    }
-  })
+document.addEventListener("mousemove", event => {
+  if (!event.target.closest('[data-element="products"]')) {
+    additionProductMenu.classList.remove("show");
+  }
+});
+
+let isShow = false;
+
+const navIcon = document.querySelector("#navIcon");
+const navList = document.querySelector(".nav__list");
+const navBasket = document.querySelector(".nav__basket");
+
+navIcon.addEventListener("click", () => {
+  navList.classList.toggle('hideNavElement');
+  navBasket.classList.toggle('hideNavElement');
+});

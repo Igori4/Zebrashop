@@ -21,6 +21,12 @@ body {
   margin-bottom: 200px;
 }
 
+.main__text {
+  position: absolute;
+  visibility: hidden;
+  z-index: -10000;
+}
+
 .header__describes {
   color: white;
   margin: 200px auto;
@@ -77,6 +83,7 @@ body {
   color: #626262;
   line-height: 60px;
   padding: 22px 20px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .item-link:hover {
@@ -91,12 +98,18 @@ body {
   line-height: 31px;
 }
 
+.nav__icon {
+  font-size: 40px;
+  display: none;
+}
+
 .additition__menu {
   position: absolute;
   width: max-content;
   display: none;
   background: #cf1a2b;
   cursor: auto;
+  transition: all 0.4s ease;
 }
 
 .show {
@@ -176,12 +189,26 @@ body {
 
 .left-arrow {
   position: absolute;
+  width: 43px;
+  background: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  height: 149px;
+  background-image: url(../image/left-arrow.png);
   top: 50%;
   left: 10%;
 }
 
 .right-arrow {
   position: absolute;
+  width: 43px;
+  background: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  height: 149px;
+  background-image: url(../image/right-arrow.png);
   top: 50%;
   right: 10%;
 }
@@ -219,7 +246,8 @@ body {
 .categories__items {
   overflow: hidden;
   margin: auto;
-  max-width: 1224px;
+  display: flex;
+  max-width: 1024px;
   height: 270px;
   position: relative;
 }
@@ -230,57 +258,48 @@ body {
   cursor: pointer;
 }
 
-.categories__items_item-empty,
-.categories__items_item-shoes,
-.categories__items_item-tshort,
-.categories__items_item-pans,
-.categories__items_item-capy {
-  height: 200px;
-  width: 200px;
+[class|="categories__items_item"] {
+  height: 160px;
+  width: 160px;
   border-radius: 100px;
   background-color: #58dbd2a4;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease;
 }
 
 .first_ellips {
-  left: 1%;
-  top: 50px;
+  position: absolute;
 }
 
 .second_ellips {
-  top: 0px;
-  left: 11%;
+  transform: translate(80px, 45px);
 }
 
 .third_ellips {
-  top: 50px;
-  left: 22%;
+  transform: translate(53px);
 }
 
 .fourth_ellips {
-  left: 33%;
+  transform: translate(20px, 51px);
 }
 
 .fifth_ellips {
-  top: 50px;
-  left: 44%;
+  transform: translate(-10px);
 }
 
 .sixth_ellips {
-  left: 55%;
-  top: 11px;
+  transform: translate(-30px, 20px);
 }
 
 .seventh_ellips {
-  top: 60px;
-  left: 66%;
+  transform: translate(-45px, 46px);
 }
 
 .eighth_ellips {
-  left: 77%;
+  position: absolute;
+  right: 0;
 }
 
 .levis__container {
@@ -340,10 +359,11 @@ body {
 .gallary__list_product {
   border: 1px solid #cacaca;
   cursor: pointer;
+  box-shadow: 0px 2px 8px 0px #e6b5b5;
 }
 
 .gallary__list_product:hover {
-  border: 1px solid red;
+  box-shadow: 0px 2px 8px 0px #f87373;
 }
 
 .add_to_cart {
@@ -353,6 +373,13 @@ body {
   cursor: pointer;
   background: #d62132;
   padding: 5px 10px;
+  box-shadow: 0px 2px 5px 0px #da7c7c;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.add_to_cart:hover {
+  border: 2px solid #e15a5a;
+  background: #809aa7;
 }
 
 .footer {
@@ -380,4 +407,275 @@ body {
   font-family: "HelveticaNeueLight", "sans-serif";
   margin: 0;
   color: #50545b;
+}
+
+@media (max-width: 991px) {
+  .header {
+    margin-bottom: 180px;
+  }
+
+  .promo__product-link img {
+    height: 200px;
+  }
+
+  .gallery__list li:nth-last-child(1) {
+    display: none;
+  }
+
+  .first_ellips,
+  .eighth_ellips {
+    display: none;
+  }
+}
+
+@media (max-width: 924px) {
+  [class|="categories__items_item"] {
+    height: 145px;
+  }
+
+  [class|="categories__items_item"] img {
+    height: 55px;
+  }
+
+  .add_to_cart {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 798px) {
+  .promo__product-link img {
+    height: 175px;
+  }
+
+  .header {
+    margin-bottom: 155px;
+  }
+
+  .left-arrow {
+    top: 40%;
+    left: 2%;
+  }
+
+  .right-arrow {
+    top: 40%;
+    right: 2%;
+  }
+
+  [class|="categories__items_item"] {
+    height: 130px;
+  }
+
+  .categories__title {
+    font-size: 65px;
+  }
+
+  .categories__title {
+    font-size: 50px;
+  }
+
+  .product__descriptions {
+    font-size: 15px;
+  }
+
+  .rate {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 737px) {
+  .header {
+    margin: 0;
+    height: 100%;
+  }
+
+  .additition__menu,
+  .main_levis_brand {
+    display: none;
+  }
+
+  .nav__icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .nav__icon:hover {
+    color: aqua;
+  }
+
+  .promo__container::after {
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    border-top: 1px solid rgba(119, 188, 244, 0.541);
+  }
+
+  .nav__container {
+    flex-direction: column;
+  }
+
+  .nav__list {
+    display: flex;
+    align-self: center;
+  }
+
+  .nav__basket {
+    align-self: center;
+  }
+
+  .list__items {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .right-arrow {
+    top: 17%;
+    right: 0%;
+  }
+
+  .left-arrow {
+    top: 17%;
+    left: 0%;
+  }
+
+  .header__describes_small {
+    font-size: 14px;
+    letter-spacing: 25px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .header__describes_title {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .promo__products {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 55%;
+  }
+
+  .showNavElement {
+    display: block;
+  }
+
+  .hideNavElement {
+    display: none;
+  }
+
+  .categories__title {
+    font-size: 30px;
+    color: #06b5a9;
+    text-shadow: 4px 5px 8px black;
+  }
+
+  .categories {
+    background: none;
+    margin: 0 0 40px;
+  }
+
+  .categories__items {
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+  }
+
+  [class|="categories__items_item"] {
+    transform: none;
+    height: 200px;
+    width: 200px;
+    margin: 20px 0;
+    box-shadow: -1px 8px 20px 0px #0000005c;
+  }
+
+  [class|="categories__items_item"] img {
+    height: 80px;
+  }
+
+  [class|="categories__items_item"]:nth-child(1n + 6) {
+    display: none;
+  }
+
+  .levis__container_product {
+    flex-direction: column;
+  }
+
+  .gallary__list_product img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .product__rate {
+    width: 100%;
+  }
+
+  .add_to_cart {
+    font-size: 24px;
+  }
+
+  .levis__product_main_image {
+    text-align: center;
+  }
+
+  .levis__product_main_image img {
+    width: 200px;
+  }
+
+  .product__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer__sociale {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product__title {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .Copyright {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .product__rate {
+    flex-direction: column;
+  }
+
+  .product__descriptions {
+    font-size: 13px;
+    margin: 10px auto;
+  }
+
+  .header__describes_title {
+    font-size: 45px;
+  }
+  .header__describes_small {
+    font-size: 14px;
+    letter-spacing: 10px;
+  }
+
+  .categories__title {
+    font-size: 17px;
+  }
+
+  [class|="categories__items_item"] {
+    height: 167px;
+    width: 167px;
+  }
+
+  .gallery__list li:nth-child(1n+4) {
+    display: none;
+}
 }
